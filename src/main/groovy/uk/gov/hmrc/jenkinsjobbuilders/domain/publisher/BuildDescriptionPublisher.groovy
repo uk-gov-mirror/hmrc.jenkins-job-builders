@@ -4,8 +4,8 @@ import uk.gov.hmrc.jenkinsjobbuilders.domain.AbstractBuildDescription
 
 final class BuildDescriptionPublisher extends AbstractBuildDescription implements Publisher {
 
-    private BuildDescriptionPublisher(String regex, String description) {
-        super(regex, description)
+    private BuildDescriptionPublisher(String regex, String description, String regularExpressionForFailed, String descriptionForFailed) {
+        super(regex, description, regularExpressionForFailed, descriptionForFailed)
     }
 
     static BuildDescriptionPublisher buildDescriptionByTextPublisher(String description) {
